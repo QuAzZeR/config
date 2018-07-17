@@ -5,6 +5,7 @@ set encoding=utf-8
 filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
+Plugin 'chrisbra/csv.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'hzchirs/vim-material'
