@@ -5,6 +5,7 @@ set encoding=utf-8
 filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
+Plugin 'tpope/vim-surround'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'gmarik/Vundle.vim'
@@ -39,17 +40,19 @@ Arpeggio inoremap sd <C-w>
 Arpeggio inoremap kl <C-w>
 Arpeggio nnoremap sdf ciw
 Arpeggio nnoremap jkl ciw
-Arpeggio nnoremap bn :bn<CR>
-Arpeggio nnoremap bp :bp<CR>
-Arpeggio nnoremap bd :bd<CR>
-Arpeggio nnoremap bl :bl<CR>
+Arpeggio nnoremap jk :bn!<CR>
+Arpeggio nnoremap df :bp!<CR>
+Arpeggio nnoremap as :bf<CR>
+Arpeggio nnoremap l; :bl<CR>
+
 endfunction
 syntax on
-set tabstop=4 shiftwidth=4 softtabstop=4  
+set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
 set nu
 set ruler 
 set mouse=a
+set clipboard=unnamed
 set  incsearch hlsearch
 map <Up> <NOP>
 map <Down> <NOP>
@@ -80,7 +83,7 @@ map <C-S-h> <C-W>h
 map <C-S-l> <C-W>l
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|(node_modules|build|dist)$',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
