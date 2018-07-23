@@ -6,6 +6,7 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'tpope/vim-surround'
+Plugin 'mhinz/vim-startify'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'gmarik/Vundle.vim'
@@ -82,7 +83,7 @@ map <C-S-k> <C-W>k
 map <C-S-h> <C-W>h
 map <C-S-l> <C-W>l
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)|(node_modules|build|dist)$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)|(node_modules|build|dist|env)$',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
