@@ -63,6 +63,11 @@ imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
+map <C-n> :NERDTreeToggle<CR>
+map <C-S-j> <C-W>j
+map <C-S-k> <C-W>k
+map <C-S-h> <C-W>h
+map <C-S-l> <C-W>l
 let mapleader=" "
 syntax enable
 " set background=dark
@@ -70,18 +75,13 @@ syntax enable
 " colorscheme cobalt2
 " let g:material_style='palenight'
 set background=dark
-colorscheme cobalt2
+colorscheme material-theme
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='material'
 set laststatus=2
-map <C-n> :NERDTreeToggle<CR>
-map <C-S-j> <C-W>j
-map <C-S-k> <C-W>k
-map <C-S-h> <C-W>h
-map <C-S-l> <C-W>l
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|(node_modules|build|dist|env)$',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
