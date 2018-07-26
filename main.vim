@@ -43,12 +43,11 @@ Arpeggio nnoremap sdf ciw
 Arpeggio nnoremap jkl ciw
 Arpeggio nnoremap jk :bn!<CR>
 Arpeggio nnoremap df :bp!<CR>
-Arpeggio nnoremap as :bf<CR>
-Arpeggio nnoremap l; :bl<CR>
 
 endfunction
 syntax on
 set tabstop=2 shiftwidth=2 softtabstop=2
+set expandtab
 set autoindent
 set nu
 set ruler 
