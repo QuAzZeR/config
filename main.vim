@@ -1,7 +1,7 @@
 """ Powered by fe1t
 set termguicolors
 set t_Co=256
-set encoding=utf-8
+set encoding=UTF-8
 filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
@@ -11,7 +11,7 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'hzchirs/vim-material'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlp/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'GertjanReynaert/cobalt2-vim-theme'
 Plugin 'scrooloose/nerdtree'
@@ -73,6 +73,12 @@ syntax enable
 " colorscheme material-theme
 " colorscheme cobalt2
 " let g:material_style='palenight'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
 set background=dark
 colorscheme material-theme
 let g:airline#extensions#tabline#enabled = 1
@@ -80,6 +86,7 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='material'
+let g:airline_powerline_fonts = 1
 set laststatus=2
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|(node_modules|build|dist|env)$',
