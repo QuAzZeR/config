@@ -5,6 +5,7 @@ set encoding=UTF-8
 filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-startify'
 Plugin 'chrisbra/csv.vim'
@@ -41,8 +42,6 @@ Arpeggio inoremap sd <C-w>
 Arpeggio inoremap kl <C-w>
 Arpeggio nnoremap sdf ciw
 Arpeggio nnoremap jkl ciw
-Arpeggio nnoremap jk :bn!<CR>
-Arpeggio nnoremap df :bp!<CR>
 
 endfunction
 syntax on
