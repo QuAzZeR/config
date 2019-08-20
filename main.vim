@@ -31,7 +31,7 @@ Bundle 'L9'
 Plugin 'jdkanani/vim-material-theme'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'bling/vim-airline'
-Plugin 'user/L9', {'name': 'newL9'}
+Plugin 'hashivim/vim-terraform'
 call vundle#end()
 autocmd VimEnter * call SetupChord()
 function! SetupChord()
