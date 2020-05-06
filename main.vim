@@ -32,6 +32,7 @@ Plugin 'jdkanani/vim-material-theme'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'bling/vim-airline'
 Plugin 'hashivim/vim-terraform'
+Plugin 'skielbasa/vim-material-monokai'
 call vundle#end()
 autocmd VimEnter * call SetupChord()
 function! SetupChord()
@@ -79,12 +80,15 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
 set background=dark
-colorscheme material-theme
+"colorscheme material-theme
+set background=dark
+colorscheme material-monokai
+let g:materialmonokai_italic=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme='material'
+let g:airline_theme='materialmonokai'
 set laststatus=2
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|(node_modules|build|dist|env)$',
