@@ -3,8 +3,8 @@ set termguicolors
 set t_Co=256
 set encoding=UTF-8
 filetype off                   " required!
-set rtp+=~/.vim/bundle/Vundle.vim/
 
+let mapleader=" "
 syntax on
 set tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
@@ -34,3 +34,8 @@ source ~/.config/nvim/theme.vim
 source ~/.config/nvim/chord.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/config.vim
+
+" COMMAND to fix typing mistakes
+command Q q
+command Wq wq
+command WQ wq

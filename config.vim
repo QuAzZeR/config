@@ -1,4 +1,3 @@
-let mapleader=" "
 map <Up> <NOP>
 map <Down> <NOP>
 map <Left> <NOP>

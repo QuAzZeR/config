@@ -12,15 +12,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
-"Plugin 'rizzatti/dash.vim'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'neoclide/coc.nvim' 
-"Plugin 'kien/ctrlp.vim'
+
 "Language
 Plugin 'chrisbra/csv.vim'
-"Plugin 'FuzzyFinder'
-"Bundle 'L9'
-"Plugin 'hashivim/vim-terraform'
+
 "Theme
 Plugin 'GertjanReynaert/cobalt2-vim-theme'
 Plugin 'tomasr/molokai'
