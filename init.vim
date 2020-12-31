@@ -4,35 +4,38 @@ set t_Co=256
 set encoding=UTF-8
 filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim/
+
 call vundle#begin()
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
-Plugin 'mhinz/vim-startify'
-Plugin 'chrisbra/csv.vim'
-Plugin 'vim-syntastic/syntastic'
+"General
 Plugin 'gmarik/Vundle.vim'
-Plugin 'hzchirs/vim-material'
-Plugin 'ctrlp/ctrlp.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'GertjanReynaert/cobalt2-vim-theme'
-Plugin 'scrooloose/nerdtree'
-Plugin 'rizzatti/dash.vim'
-Plugin 'tomasr/molokai'
-Plugin 'sickill/vim-monokai'
+Plugin 'mhinz/vim-startify'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
 Plugin 'kana/vim-arpeggio'
-Plugin 'dtinth/vim-colors-dtinth256'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-commentary'
+Plugin 'rizzatti/dash.vim'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'tpope/vim-rails.git'
+Plugin 'neoclide/coc.nvim' 
+Plugin 'kien/ctrlp.vim'
+"Language
+Plugin 'chrisbra/csv.vim'
 Plugin 'FuzzyFinder'
 Bundle 'L9'
-Plugin 'jdkanani/vim-material-theme'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'bling/vim-airline'
 Plugin 'hashivim/vim-terraform'
+"Theme
+Plugin 'GertjanReynaert/cobalt2-vim-theme'
+Plugin 'tomasr/molokai'
+Plugin 'sickill/vim-monokai'
+Plugin 'dtinth/vim-colors-dtinth256'
+Plugin 'jdkanani/vim-material-theme'
+Plugin 'hzchirs/vim-material'
 Plugin 'skielbasa/vim-material-monokai'
+Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'bling/vim-airline'
 call vundle#end()
 autocmd VimEnter * call SetupChord()
 function! SetupChord()
@@ -54,6 +57,8 @@ set ruler
 set mouse=a
 set clipboard=unnamed
 set  incsearch hlsearch
+
+let mapleader=" "
 map <Up> <NOP>
 map <Down> <NOP>
 map <Left> <NOP>
@@ -67,12 +72,8 @@ map <C-S-j> <C-W>j
 map <C-S-k> <C-W>k
 map <C-S-h> <C-W>h
 map <C-S-l> <C-W>l
-let mapleader=" "
+
 syntax enable
-" set background=dark
-" colorscheme material-theme
-" colorscheme cobalt2
-" let g:material_style='palenight'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -81,8 +82,7 @@ let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
 set background=dark
 "colorscheme material-theme
-set background=dark
-colorscheme material-monokai
+colorscheme dracula
 let g:materialmonokai_italic=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep=''
@@ -90,9 +90,4 @@ let g:airline_right_sep=''
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='materialmonokai'
 set laststatus=2
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)|(node_modules|build|dist|env)$',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
 
