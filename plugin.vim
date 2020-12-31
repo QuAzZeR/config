@@ -4,12 +4,10 @@ call vundle#begin()
 "General
 Plugin 'chakrit/vim-thai-keys'
 Plugin 'gmarik/Vundle.vim'
-Plugin 'mhinz/vim-startify'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kana/vim-arpeggio'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
 
@@ -20,6 +18,9 @@ Plugin 'chrisbra/csv.vim'
 
 " Python
 Plugin 'vim-python/python-syntax'
+Plugin 'lambdalisue/vim-pyenv'
+Plugin 'davidhalter/jedi-vim'
+
 
 "Theme
 Plugin 'GertjanReynaert/cobalt2-vim-theme'

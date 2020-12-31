@@ -7,3 +7,4 @@ let g:coc_global_extensions = [
             \     'coc-syntax',         
             \     'coc-python',         
             \   ]
+set cmdheight=2
