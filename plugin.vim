@@ -12,10 +12,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
-Plugin 'neoclide/coc.nvim' 
 
+" Language Client
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 "Language
 Plugin 'chrisbra/csv.vim'
+
+" Python
+Plugin 'vim-python/python-syntax'
 
 "Theme
 Plugin 'GertjanReynaert/cobalt2-vim-theme'
@@ -27,5 +31,8 @@ Plugin 'hzchirs/vim-material'
 Plugin 'skielbasa/vim-material-monokai'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'bling/vim-airline'
+
+"Utilities
+Plugin 'tomtom/tcomment_vim'
 call vundle#end()
 
