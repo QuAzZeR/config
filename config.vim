@@ -1,8 +1,8 @@
 " Ignore arrow key
-map <Up> <NOP>
-map <Down> <NOP>
-map <Left> <NOP>
-map <Right> <NOP>
+imap <Up> <NOP>
+imap <Down> <NOP>
+imap <Left> <NOP>
+imap <Right> <NOP>
 map <Up> <NOP>
 map <Down> <NOP>
 map <Left> <NOP>
@@ -39,7 +39,8 @@ let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*.o,*.obj,.git
 set wildignore+=node_moddules
 set wildignore+=venv,env,*.pyc
-
+let g:ctrlp_working_path_mode = '0'
+let g:ctrlp_custom_ignore = '__pycache__\|venv\|env\|node_modules\|DS_Store\|git'
 
 " NerdTree
 let NERDTreeIgnore = ['node_modules', '\.pyc$', '_build']
@@ -47,3 +48,12 @@ map <C-\> :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 
+" quickfix
+nnoremap q] :cn<CR>
+nnoremap q[ :cp<CR>
+let g:qf_max_height = 5
+
+let g:syntastic_python_checkers = ['pylint']
+
+" YAML
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

@@ -10,10 +10,10 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
 set autoindent
 set nu
-set ruler 
+set ruler
 set mouse=a
 set clipboard=unnamed
-set  incsearch hlsearch
+set  incsearch hlsearch smartcase
 
 syntax enable
 set laststatus=2

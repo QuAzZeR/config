@@ -11,12 +11,15 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'kien/ctrlp.vim'
 
-"NERDTree
+" Navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 " Language Client
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'vim-syntastic/syntastic'
 
 " CSV
 Plugin 'chrisbra/csv.vim'

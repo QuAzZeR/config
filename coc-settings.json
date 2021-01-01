@@ -39,5 +39,10 @@
         "initializationOptions": {},
         "settings": {}
     }
-  }
+  },
+  "python.venvFolders": ["envs", ".pyenv", ".direnv", "venv"],
+  "python.linting.pylintArgs": [
+    "--disable=C0111",
+    "--load-plugins=pylint_django,pylint_celery"
+  ]
 }

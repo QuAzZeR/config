@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
             \     'coc-vimlsp',
             \     'coc-syntax',
             \     'coc-python',
+            \     'coc-jedi',
             \   ]
 set cmdheight=2
 
@@ -74,3 +75,17 @@ xmap <silent> <TAB> <Plug>(coc-range-select)
 nmap <leader>rn <Plug>(coc-rename)
 
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction-line)
