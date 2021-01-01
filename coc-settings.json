@@ -31,18 +31,13 @@
       }
     },
     "terraform": {
-        "command": "terraform-lsp",
-        "filetypes": [
-            "terraform",
-            "tf"
-        ],
-        "initializationOptions": {},
-        "settings": {}
+      "command": "terraform-lsp",
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
     }
   },
+  "python.linting.pylintEnabled": false,
   "python.venvFolders": ["envs", ".pyenv", ".direnv", "venv"],
-  "python.linting.pylintArgs": [
-    "--disable=C0111",
-    "--load-plugins=pylint_django,pylint_celery"
-  ]
+  "python.linting.flake8Enabled": true
 }

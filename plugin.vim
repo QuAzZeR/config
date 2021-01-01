@@ -37,7 +37,7 @@ Plugin 'hzchirs/vim-material'
 Plugin 'skielbasa/vim-material-monokai'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'mkitt/tabline.vim'
-
+Plugin 'vim-airline/vim-airline'
 "Utilities
 Plugin 'tomtom/tcomment_vim'
 call vundle#end()

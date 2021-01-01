@@ -7,7 +7,7 @@ let g:coc_global_extensions = [
             \     'coc-vimlsp',
             \     'coc-syntax',
             \     'coc-python',
-            \     'coc-jedi',
+            \     'coc-jedi'
             \   ]
 set cmdheight=2
 
@@ -84,8 +84,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+" Python
+autocmd BufWritePre *.py :call CocAction('runCommand', 'python.sortImports')
 
-" Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction-line)
