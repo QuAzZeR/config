@@ -88,3 +88,5 @@ autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeIm
 " Python
 autocmd BufWritePre *.py :call CocAction('runCommand', 'python.sortImports')
 
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
