@@ -57,3 +57,14 @@ let g:syntastic_python_checkers = ['pylint']
 
 " YAML
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+
+" turn off if slow
+let g:go_highlight_structs = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+noremap <leader>/ :Commentary<cr>

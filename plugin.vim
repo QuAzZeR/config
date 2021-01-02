@@ -23,6 +23,8 @@ Plugin 'vim-syntastic/syntastic'
 
 " CSV
 Plugin 'chrisbra/csv.vim'
+" Go
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Python
 Plugin 'vim-python/python-syntax'
