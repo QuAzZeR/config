@@ -90,3 +90,8 @@ autocmd BufWritePre *.py :call CocAction('runCommand', 'python.sortImports')
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction-line)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)

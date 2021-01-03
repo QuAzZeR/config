@@ -16,7 +16,7 @@ map <C-S-l> <C-W>l
 
 "Easy motion
 map <leader>a <leader><leader>f
-map <leader>Q <leader><leader>F
+map <leader>q <leader><leader>F
 
 " default vim mapping
 nnoremap tn :tabnew<CR>
@@ -54,13 +54,10 @@ nnoremap q[ :cp<CR>
 let g:qf_max_height = 5
 
 let g:syntastic_python_checkers = ['pylint']
-
-" YAML
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-
+" Golang
+autocmd FileType go setlocal shiftwidth=2 tabstop=2=
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
-
 " turn off if slow
 let g:go_highlight_structs = 1
 let g:go_highlight_methods = 1
@@ -68,3 +65,9 @@ let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 noremap <leader>/ :Commentary<cr>
+
+" YAML
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+"python
+let g:python_highlight_all = 1
