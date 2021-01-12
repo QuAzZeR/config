@@ -16,7 +16,7 @@ map <C-S-l> <C-W>l
 
 "Easy motion
 map <leader>a <leader><leader>f
-map <leader>q <leader><leader>F
+map <leader>A <leader><leader>F
 
 " default vim mapping
 nnoremap tn :tabnew<CR>
@@ -47,7 +47,6 @@ let NERDTreeIgnore = ['node_modules', '\.pyc$', '_build']
 map <C-\> :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<CR>
 autocmd BufWritePre * :%s/\s\+$//e
-
 " quickfix
 nnoremap q] :cn<CR>
 nnoremap q[ :cp<CR>
@@ -55,10 +54,13 @@ let g:qf_max_height = 5
 
 let g:syntastic_python_checkers = ['pylint']
 " Golang
-autocmd FileType go setlocal shiftwidth=2 tabstop=2=
+autocmd FileType go setlocal shiftwidth=2 tabstop=2 expandtab
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 " turn off if slow
+let g:go_highlight_fields = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
