@@ -37,6 +37,7 @@
       "settings": {}
     }
   },
+  "diagnostic.checkCurrentLine": true,
   "python.linting.pylintEnabled": false,
   "python.venvFolders": ["envs", ".pyenv", ".direnv", "venv"],
   "python.linting.flake8Enabled": true,

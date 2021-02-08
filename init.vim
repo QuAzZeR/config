@@ -10,6 +10,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
 set autoindent
 set nu
+set relativenumber
 set ruler
 set mouse=a
 set clipboard=unnamed

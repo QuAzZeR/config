@@ -20,6 +20,7 @@ map <leader>A <leader><leader>F
 
 " default vim mapping
 nnoremap tn :tabnew<CR>
+nnoremap tb :bufdo  tab split<CR>
 
 nnoremap <leader>0 10gt
 nnoremap <leader>1 1gt
@@ -52,7 +53,6 @@ nnoremap q] :cn<CR>
 nnoremap q[ :cp<CR>
 let g:qf_max_height = 5
 
-let g:syntastic_python_checkers = ['pylint']
 " Golang
 autocmd FileType go setlocal shiftwidth=2 tabstop=2 expandtab
 let g:go_fmt_command = "goimports"
