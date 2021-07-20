@@ -20,7 +20,7 @@ map <leader>A <leader><leader>F
 
 " default vim mapping
 nnoremap tn :tabnew<CR>
-nnoremap tb :bufdo  tab split<CR>
+nnoremap tb :tabe<CR>
 
 nnoremap <leader>0 10gt
 nnoremap <leader>1 1gt
@@ -33,15 +33,9 @@ nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 8gt
 nnoremap <leader>0 10gt
-
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-set wildignore+=*.o,*.obj,.git
-set wildignore+=node_moddules
-set wildignore+=venv,env,*.pyc
-let g:ctrlp_working_path_mode = '0'
-let g:ctrlp_custom_ignore = '__pycache__\|venv\|env\|node_modules\|DS_Store\|git'
+map <C-j> :bn<cr>
+map <C-x> :bd<cr>
+map <C-k> :bn<cr>
 
 " NerdTree
 let NERDTreeIgnore = ['node_modules', '\.pyc$', '_build']
@@ -73,3 +67,9 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 "python
 let g:python_highlight_all = 1
+
+"Markdown
+let g:previm_open_cmd = 'open -a Brave'
+let g:previm_enable_realtime = 1
+
+
