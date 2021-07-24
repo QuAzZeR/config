@@ -35,7 +35,7 @@ nnoremap <leader>9 8gt
 nnoremap <leader>0 10gt
 map <C-j> :bn<cr>
 map <C-x> :bd<cr>
-map <C-k> :bn<cr>
+map <C-k> :bp<cr>
 
 " NerdTree
 let NERDTreeIgnore = ['node_modules', '\.pyc$', '_build']
