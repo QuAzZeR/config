@@ -9,10 +9,10 @@ map <Left> <NOP>
 map <Right> <NOP>
 
 " Move between window
-map <C-S-j> <C-W>j
-map <C-S-k> <C-W>k
-map <C-S-h> <C-W>h
-map <C-S-l> <C-W>l
+map <leader>j <C-W>j
+map <leader>k <C-W>k
+map <leader>h <C-W>h
+map <leader>l <C-W>l
 
 "Easy motion
 map <leader>a <leader><leader>f
@@ -53,20 +53,20 @@ let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 
 " turn off if slow
-" let g:go_highlight_fields = 1
-" let g:go_highlight_function_calls = 1
-" let g:go_highlight_extra_types = 1
-" let g:go_highlight_structs = 1
-" let g:go_highlight_methods = 1
-" let g:go_highlight_functions = 1
-" let g:go_highlight_operators = 1
-" let g:go_highlight_build_constraints = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " YAML
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 "python
-let g:python_highlight_all = 1
+" let g:python_highlight_all = 1
 
 "Markdown
 let g:previm_open_cmd = 'open -a Brave'

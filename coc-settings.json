@@ -1,4 +1,10 @@
 {
+  "suggest.noselect": false,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "!",
+  "diagnostic.infoSign": "?",
+  "diagnostic.checkCurrentLine": true,
+  "coc.preferences.hoverTarget": "float",
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "html",
@@ -7,7 +13,8 @@
     "typescript",
     "typescript.tsx",
     "typescriptreact",
-    "rust"
+    "go",
+    "python"
   ],
   "suggest.timeout": 5000,
   "languageserver": {
@@ -25,10 +32,7 @@
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "usePlaceholders": true
-      }
+      "filetypes": ["go"]
     },
     "terraform": {
       "command": "terraform-lsp",
@@ -37,7 +41,6 @@
       "settings": {}
     }
   },
-  "diagnostic.checkCurrentLine": true,
   "python.linting.pylintEnabled": false,
   "python.venvFolders": ["envs", ".pyenv", ".direnv", "venv"],
   "python.linting.flake8Enabled": true,

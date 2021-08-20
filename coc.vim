@@ -36,6 +36,13 @@ nmap <silent> gR <Plug>(coc-declaration)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -87,10 +94,29 @@ autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeIm
 " Python
 autocmd BufWritePre *.py :call CocAction('runCommand', 'python.sortImports')
 
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+" Only show signcolumn on errors
+set signcolumn=auto
 
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction-line)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
+" colorscheme gruvbox
+" autocmd ColorScheme * highlight CocErrorFloat guifg=#ffffff
+" autocmd ColorScheme * highlight CocInfoFloat guifg=#ffffff
+" autocmd ColorScheme * highlight CocWarningFloat guifg=#ffffff
+" autocmd ColorScheme * highlight SignColumn guibg=#adadad

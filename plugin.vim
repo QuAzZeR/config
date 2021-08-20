@@ -30,18 +30,17 @@ Plugin 'kannokanno/previm'
 " CSV
 Plugin 'chrisbra/csv.vim'
 " Go
-Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plugin 'fatih/vim-go'
 
 " Python
-Plugin 'vim-python/python-syntax'
+"Plugin 'vim-python/python-syntax'
 
 "Theme
 Plugin 'dracula/vim', { 'name': 'dracula' }
-Plugin 'mkitt/tabline.vim'
+"Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
-
 "Utilities
 Plugin 'tomtom/tcomment_vim'
-Plugin 'codota/tabnine-vim'
+" Plugin 'codota/tabnine-vim'
 call vundle#end()
 
