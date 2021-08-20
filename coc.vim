@@ -7,7 +7,8 @@ let g:coc_global_extensions = [
             \     'coc-vimlsp',
             \     'coc-syntax',
             \     'coc-python',
-            \     'coc-jedi'
+            \     'coc-jedi',
+            \     'coc-go'
             \   ]
 set cmdheight=2
 
