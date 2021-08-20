@@ -1,7 +1,7 @@
 """ Powered by fe1t
 set termguicolors
 set t_Co=256
-set encoding=UTF-8
+set encoding=utf8
 filetype off                   " required!
 
 let mapleader=" "
@@ -15,6 +15,7 @@ set ruler
 set mouse=a
 set clipboard=unnamed
 set  incsearch hlsearch smartcase
+set noswapfile
 
 syntax enable
 set laststatus=2

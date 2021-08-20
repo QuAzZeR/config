@@ -8,16 +8,16 @@ Plugin 'Lokaltog/vim-easymotion' "Plugin Easy motion with finding the key
 Plugin 'airblade/vim-gitgutter' "Plugin for showing git like gitlen
 Plugin 'kana/vim-arpeggio'
 Plugin 'tpope/vim-surround' "Plugin to help changing the surround
-"Plugin 'tpope/vim-commentary'
-" Navigation
-"Plugin 'kien/ctrlp.vim'
+Plugin 'Yggdroot/indentLine'
 " For telescope
 Plugin 'nvim-lua/popup.nvim'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 " Navigation
 Plugin 'scrooloose/nerdtree'
+"Plugin 'ryanoasis/vim-devicons'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'voldikss/vim-floaterm'
 "Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plugin 'junegunn/fzf.vim'
 
@@ -36,16 +36,10 @@ Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plugin 'vim-python/python-syntax'
 
 "Theme
-Plugin 'GertjanReynaert/cobalt2-vim-theme'
-Plugin 'tomasr/molokai'
-Plugin 'sickill/vim-monokai'
-"Plugin 'dtinth/vim-colors-dtinth256'
-"Plugin 'jdkanani/vim-material-theme'
-"Plugin 'hzchirs/vim-material'
-" Plugin 'skielbasa/vim-material-monokai'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
+
 "Utilities
 Plugin 'tomtom/tcomment_vim'
 Plugin 'codota/tabnine-vim'

@@ -71,8 +71,6 @@ augroup end
 nmap <silent> <TAB> <Plug>(coc-range-select)
 xmap <silent> <TAB> <Plug>(coc-range-select)
 
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
 
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
@@ -84,6 +82,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+" Go
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 " Python
 autocmd BufWritePre *.py :call CocAction('runCommand', 'python.sortImports')

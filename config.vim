@@ -33,9 +33,9 @@ nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 8gt
 nnoremap <leader>0 10gt
-map <C-j> :bn<cr>
+map <C-j> :bp<cr>
 map <C-x> :bd<cr>
-map <C-k> :bp<cr>
+map <C-k> :bn<cr>
 
 " NerdTree
 let NERDTreeIgnore = ['node_modules', '\.pyc$', '_build']
@@ -51,16 +51,16 @@ let g:qf_max_height = 5
 autocmd FileType go setlocal shiftwidth=2 tabstop=2 expandtab
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
+
 " turn off if slow
-let g:go_highlight_fields = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-noremap <leader>/ :Commentary<cr>
+" let g:go_highlight_fields = 1
+" let g:go_highlight_function_calls = 1
+" let g:go_highlight_extra_types = 1
+" let g:go_highlight_structs = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_build_constraints = 1
 
 " YAML
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

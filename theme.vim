@@ -10,3 +10,4 @@ let g:airline_theme='dracula'
 let g:airline_powerline_fonts=1
 set laststatus=2
 let g:airline#extensions#tabline#show_tabs = 1
+set guifont=Fira_Code:h12
