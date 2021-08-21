@@ -49,5 +49,8 @@
     "--ignores=F0002"
   ],
   "jedi.enable": false,
-  "prettier.semi": false
+  "prettier.semi": false,
+  "go.goplsOptions": {
+      "completeUnimported": true
+  }
 }

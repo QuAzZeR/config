@@ -48,9 +48,10 @@ nnoremap q[ :cp<CR>
 let g:qf_max_height = 5
 
 " Golang
-autocmd FileType go setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType go setlocal shiftwidth=4 tabstop=4 expandtab
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
+let g:go_fmt_autosave = 1
 
 " turn off if slow
 let g:go_highlight_fields = 1
