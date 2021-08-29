@@ -16,17 +16,16 @@ set mouse=a
 set clipboard=unnamed
 set  incsearch hlsearch smartcase
 set noswapfile
-
 syntax enable
 set laststatus=2
+" COMMAND to fix typing mistakes
+command Q q
+command Wq wq
+command WQ wq
 source ~/.config/nvim/plugin.vim
 source ~/.config/nvim/theme.vim
 source ~/.config/nvim/chord.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/config.vim
 source ~/.config/nvim/telescope.vim
-
-" COMMAND to fix typing mistakes
-command Q q
-command Wq wq
-command WQ wq
+"

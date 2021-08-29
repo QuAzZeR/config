@@ -2,7 +2,6 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 
 call vundle#begin()
 "General
-Plugin 'chakrit/vim-thai-keys' "Plugin for vim command when keyboard language is th layout
 Plugin 'gmarik/Vundle.vim' "Plugin for install Vundle
 Plugin 'Lokaltog/vim-easymotion' "Plugin Easy motion with finding the key
 Plugin 'airblade/vim-gitgutter' "Plugin for showing git like gitlen
