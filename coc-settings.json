@@ -41,12 +41,11 @@
       "settings": {}
     }
   },
-  "python.linting.pylintEnabled": false,
   "python.venvFolders": ["envs", ".pyenv", ".direnv", "venv"],
+  "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": [
-    "--max-line-length=120",
-    "--ignores=F0002"
+    "--max-line-length=120"
   ],
   "jedi.enable": false,
   "prettier.semi": false,
