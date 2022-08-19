@@ -5,10 +5,10 @@ let g:coc_global_extensions = [
             \     'coc-git',
             \     'coc-vetur',
             \     'coc-vimlsp',
-            \     'coc-syntax',
             \     'coc-python',
             \     'coc-jedi',
-            \     'coc-go'
+            \     'coc-go',
+            \     'coc-docker',
             \   ]
 set cmdheight=2
 
@@ -139,3 +139,11 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 " autocmd ColorScheme * highlight CocInfoFloat guifg=#ffffff
 " autocmd ColorScheme * highlight CocWarningFloat guifg=#ffffff
 " autocmd ColorScheme * highlight SignColumn guibg=#adadad
+"
+if has("autocmd") && exists("+omnifunc")
+	autocmd Filetype *
+		    \	if &omnifunc == "" |
+		    \		setlocal omnifunc=syntaxcomplete#Complete |
+		    \	endif
+    endif
+
