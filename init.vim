@@ -28,4 +28,4 @@ source ~/.config/nvim/chord.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/config.vim
 source ~/.config/nvim/telescope.vim
-"
+source ~/.config/nvim/languages/init.vim
