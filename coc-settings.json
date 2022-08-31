@@ -15,6 +15,7 @@
     "typescriptreact",
     "go",
     "python"
+    "dart"
   ],
   "suggest.timeout": 5000,
   "languageserver": {
