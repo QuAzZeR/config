@@ -29,8 +29,7 @@ Plugin 'kannokanno/previm'
 " CSV
 Plugin 'chrisbra/csv.vim'
 " Go
-Plugin 'fatih/vim-go'
-Plugin 'sheerun/vim-polyglot'
+Plugin 'faith/vim-go'
 " Python
 "Plugin 'vim-python/python-syntax'
 "Plugin 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
@@ -41,7 +40,6 @@ Plugin 'dart-lang/dart-vim-plugin'
 
 "Theme
 Plugin 'dracula/vim', { 'name': 'dracula' }
-"Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
 "Utilities
 Plugin 'tomtom/tcomment_vim'
