@@ -29,7 +29,7 @@ Plugin 'kannokanno/previm'
 " CSV
 Plugin 'chrisbra/csv.vim'
 " Go
-Plugin 'faith/vim-go'
+Plugin 'fatih/vim-go'
 " Python
 "Plugin 'vim-python/python-syntax'
 "Plugin 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }

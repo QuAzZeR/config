@@ -14,7 +14,7 @@
     "typescript.tsx",
     "typescriptreact",
     "go",
-    "python"
+    "python",
     "dart"
   ],
   "suggest.timeout": 5000,
