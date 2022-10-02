@@ -5,7 +5,7 @@ let g:coc_global_extensions = [
             \     'coc-git',
             \     'coc-vetur',
             \     'coc-vimlsp',
-            \     'coc-python',
+            \     'coc-pyright',
             \     'coc-jedi',
             \     'coc-go',
             \     'coc-docker',
@@ -112,6 +112,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Go
 " autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 " Python
+autocmd BufWritePre *.py :call CocAction('runCommand', 'pyright.organizeimports')
 autocmd BufWritePre *.py :call CocAction('runCommand', 'python.sortImports')
 
 " Some servers have issues with backup files, see #649.

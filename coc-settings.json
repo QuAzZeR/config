@@ -4,7 +4,6 @@
   "diagnostic.warningSign": "!",
   "diagnostic.infoSign": "?",
   "diagnostic.checkCurrentLine": true,
-  "coc.preferences.hoverTarget": "float",
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "html",
@@ -42,15 +41,16 @@
       "settings": {}
     }
   },
-  "python.venvFolders": ["envs", ".pyenv", ".direnv", "venv"],
+  "jedi.enable": false,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": [
     "--max-line-length=120"
   ],
-  "jedi.enable": false,
+  "pyright.enable": true,
   "prettier.semi": false,
   "go.goplsOptions": {
       "completeUnimported": true
-  }
+  },
+  "python.analysis.diagnosticMode": "workspace"
 }

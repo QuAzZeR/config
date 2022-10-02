@@ -12,6 +12,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'nvim-lua/popup.nvim'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
+Plugin 'nvim-treesitter/nvim-treesitter'
 " Navigation
 Plugin 'scrooloose/nerdtree'
 "Plugin 'ryanoasis/vim-devicons'
