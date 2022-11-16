@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
             \     'coc-go',
             \     'coc-docker',
             \     'coc-flutter',
+            \     'coc-java',
             \   ]
 set cmdheight=2
 

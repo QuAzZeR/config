@@ -35,6 +35,9 @@ Plugin 'fatih/vim-go'
 "Plugin 'vim-python/python-syntax'
 "Plugin 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 
+" Java
+Plugin 'uiiaoo/java-syntax.vim'
+
 
 " Fluter
 Plugin 'dart-lang/dart-vim-plugin'

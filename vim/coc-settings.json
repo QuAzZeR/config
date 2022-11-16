@@ -14,7 +14,8 @@
     "typescriptreact",
     "go",
     "python",
-    "dart"
+    "dart",
+    "java"
   ],
   "suggest.timeout": 5000,
   "languageserver": {
@@ -52,5 +53,7 @@
   "go.goplsOptions": {
       "completeUnimported": true
   },
-  "python.analysis.diagnosticMode": "workspace"
+  "python.analysis.diagnosticMode": "workspace",
+  "java.saveActions.organizeImports": true,
+  "java.errors.incompleteClasspath.severity": "ignore"
 }
