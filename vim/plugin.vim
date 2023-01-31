@@ -47,6 +47,7 @@ Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'vim-airline/vim-airline'
 "Utilities
 Plugin 'tomtom/tcomment_vim'
+Plugin 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " Plugin 'codota/tabnine-vim'
 call vundle#end()
 
