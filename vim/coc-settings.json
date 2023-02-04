@@ -15,7 +15,8 @@
     "go",
     "python",
     "dart",
-    "java"
+    "java",
+    "markdown"
   ],
   "suggest.timeout": 5000,
   "languageserver": {
