@@ -7,13 +7,12 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'Mofiqul/dracula.nvim'
-  use {
-   'nvim-lualine/lualine.nvim',
-   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-  use 'akinsho/nvim-bufferline.lua'
+  use 'wbthomason/packer.nvim' -- Neovim Package Management
+  use 'Mofiqul/dracula.nvim' -- Dracula Theme 
+  use 'nvim-lualine/lualine.nvim'  -- status line
+  
+  use 'akinsho/nvim-bufferline.lua' -- tab line
+  use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
