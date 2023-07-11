@@ -46,11 +46,9 @@ keymap.set('n', '<leader><up>', '<C-W>+')
 keymap.set('n', '<leader><down>', '<C-W>-')
 
 -- Move Buffer
-keymap.set('n', '<C-j>', ':bp<cr>')
+keymap.set('n', '<C-S-j>', ':bp<cr>')
 keymap.set('n', '<C-x>', ':bd<cr>')
-keymap.set('n', '<C-k>', ':bn<cr>')
+keymap.set('n', '<C-S-k>', ':bn<cr>')
 
 
 -- Chord
-
-

@@ -16,6 +16,7 @@ ts.setup {
     "tsx",
     "typescript",
     "toml",
+    "python",
     "fish",
     "php",
     "json",
