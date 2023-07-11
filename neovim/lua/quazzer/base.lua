@@ -23,12 +23,10 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 vim.opt.smartcase = true
 
-vim.opt.guifont="Dank_Mono:h12"
 
-vim.opt.termguicolors = true
 
 vim.opt.laststatus=2
 
-vim.opt.background=dark
 
-vim.cmd[[colorscheme dracula]]
+
+vim.opt.shell = 'zsh'
