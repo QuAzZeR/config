@@ -52,4 +52,9 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+  use "folke/todo-comments.nvim"
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+  })
 end)
