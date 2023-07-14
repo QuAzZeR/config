@@ -41,7 +41,8 @@ local on_attach = function(client, bufnr)
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gR', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gy', '<Cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
@@ -77,7 +78,6 @@ protocol.CompletionItemKind = {
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 nvim_lsp.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -97,6 +97,17 @@ nvim_lsp.tsserver.setup {
       description = "Organize Imports"
     }
   }
+}
+nvim_lsp.html.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities
+}
+
+nvim_lsp.emmet_ls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 nvim_lsp.sourcekit.setup {
