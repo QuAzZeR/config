@@ -13,12 +13,9 @@ keymap.set('i', '<DOWN>', '<NOP>')
 keymap.set('i', '<LEFT>', '<NOP>')
 keymap.set('i', '<RIGHT>', '<NOP>')
 
-
-
--- TODO: need to add Easy motion alternative
-
 -- new Tab
 keymap.set('n', 'tn', ':tabnew<Return>')
+
 -- Tab Movement
 keymap.set('n', '<leader>0', '10gt')
 keymap.set('n', '<leader>1', '1gt')
@@ -54,4 +51,3 @@ keymap.set('n', 'q', ':bd<CR>')
 keymap.set('n', '<C-S-k>', ':bn<CR>')
 
 keymap.set('n', '<C-i>', '<C-I>')
--- Chord
