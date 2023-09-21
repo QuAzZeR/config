@@ -25,7 +25,8 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    "astro"
   },
   autotag = {
     enable = true,

@@ -61,4 +61,5 @@ packer.startup(function(use)
     branch = 'v2', -- optional but strongly recommended
   }
   use 'norcalli/nvim-colorizer.lua'
+  use 'iamcco/markdown-preview.nvim'
 end)
