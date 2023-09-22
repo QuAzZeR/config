@@ -137,7 +137,15 @@ nvim_lsp.lua_ls.setup {
     },
   },
 }
+nvim_lsp.pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
+nvim_lsp.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
   capabilities = capabilities
