@@ -142,10 +142,6 @@ nvim_lsp.pyright.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.gopls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
   capabilities = capabilities
