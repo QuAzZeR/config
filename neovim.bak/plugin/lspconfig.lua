@@ -5,6 +5,15 @@ if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
+local organize_imports = function()
+  local params = {
+    command = "_typescript.organizeImports",
+    arguments = { vim.api.nvim_buf_get_name(0) },
+    title = ""
+  }
+  vim.lsp.buf.execute_command(params)
+end
+
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 local enable_format_on_save = function(_, bufnr)
   vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
@@ -12,6 +21,7 @@ local enable_format_on_save = function(_, bufnr)
     group = augroup_format,
     buffer = bufnr,
     callback = function()
+      organize_imports()
       vim.lsp.buf.format({ bufnr = bufnr })
     end,
   })
@@ -31,9 +41,11 @@ local on_attach = function(client, bufnr)
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gR', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gy', '<Cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
 end
 
 protocol.CompletionItemKind = {
@@ -66,16 +78,35 @@ protocol.CompletionItemKind = {
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 nvim_lsp.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
 
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
+  capabilities = capabilities,
+  commands = {
+    OrganizeImports = {
+      organize_imports,
+      description = "Organize Imports"
+    }
+  }
+}
+nvim_lsp.html.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities
+}
+
+nvim_lsp.emmet_ls.setup {
+  on_attach = on_attach,
   capabilities = capabilities
 }
 
@@ -83,6 +114,7 @@ nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
+
 
 nvim_lsp.lua_ls.setup {
   capabilities = capabilities,
@@ -105,7 +137,15 @@ nvim_lsp.lua_ls.setup {
     },
   },
 }
+nvim_lsp.pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
@@ -116,7 +156,8 @@ nvim_lsp.astro.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
-
+nvim_lsp.vuels.setup {
+}
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,

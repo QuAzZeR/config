@@ -14,6 +14,7 @@ ts.setup {
     "markdown",
     "markdown_inline",
     "tsx",
+    "javascript",
     "typescript",
     "toml",
     "python",
@@ -24,7 +25,9 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    "astro",
+    "go",
   },
   autotag = {
     enable = true,

@@ -13,12 +13,9 @@ keymap.set('i', '<DOWN>', '<NOP>')
 keymap.set('i', '<LEFT>', '<NOP>')
 keymap.set('i', '<RIGHT>', '<NOP>')
 
-
-
--- TODO: need to add Easy motion alternative
-
 -- new Tab
 keymap.set('n', 'tn', ':tabnew<Return>')
+
 -- Tab Movement
 keymap.set('n', '<leader>0', '10gt')
 keymap.set('n', '<leader>1', '1gt')
@@ -32,12 +29,15 @@ keymap.set('n', '<leader>8', '8gt')
 keymap.set('n', '<leader>9', '9gt')
 
 -- Split window
+keymap.set('n', '<leader>s', ':sp<CR>')
+keymap.set('n', '<leader>v', ':vsp<CR>')
 
 -- Move window
 keymap.set('n', '<leader>j', '<C-W>j')
 keymap.set('n', '<leader>h', '<C-W>h')
 keymap.set('n', '<leader>k', '<C-W>k')
 keymap.set('n', '<leader>l', '<C-W>l')
+keymap.set('n', '<leader>x', '<C-W>q')
 
 -- Resize window
 keymap.set('n', '<leader><left>', '<C-W><')
@@ -46,9 +46,8 @@ keymap.set('n', '<leader><up>', '<C-W>+')
 keymap.set('n', '<leader><down>', '<C-W>-')
 
 -- Move Buffer
-keymap.set('n', '<C-S-j>', ':bp<cr>')
-keymap.set('n', '<C-x>', ':bd<cr>')
-keymap.set('n', '<C-S-k>', ':bn<cr>')
+keymap.set('n', '<C-S-j>', ':bp<CR>')
+keymap.set('n', 'q', ':bd<CR>')
+keymap.set('n', '<C-S-k>', ':bn<CR>')
 
-
--- Chord
+keymap.set('n', '<C-i>', '<C-I>')
