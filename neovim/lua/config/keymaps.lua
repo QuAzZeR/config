@@ -11,7 +11,7 @@ keymap.set("i", "<LEFT>", "<NOP>")
 keymap.set("i", "<RIGHT>", "<NOP>")
 
 -- new Tab
-keymap.set("n", "tn", ":tabnew<Return>")
+keymap.set("n", "tn", ":tabnew<Return>", opts)
 
 -- Tab Movement
 keymap.set("n", "<leader>0", "10gt")
@@ -24,12 +24,12 @@ keymap.set("n", "<leader>6", "6gt")
 keymap.set("n", "<leader>7", "7gt")
 keymap.set("n", "<leader>8", "8gt")
 keymap.set("n", "<leader>9", "9gt")
-keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<S-Tab>", ":tabprev<Return>", opts)
+keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Split window
-keymap.set("n", "<leader>s", ":sp<CR>")
-keymap.set("n", "<leader>v", ":vsp<CR>")
+keymap.set("n", "<leader>s", ":sp<CR>", opts)
+keymap.set("n", "<leader>v", ":vsp<CR>", opts)
 
 -- Move window
 keymap.set("n", "<leader>j", "<C-W>j")
@@ -45,8 +45,11 @@ keymap.set("n", "<leader><up>", "<C-W>+")
 keymap.set("n", "<leader><down>", "<C-W>-")
 
 -- Move Buffer
-keymap.set("n", "<C-S-j>", ":bp<CR>")
-keymap.set("n", "q", ":bd<CR>")
-keymap.set("n", "<C-S-k>", ":bn<CR>")
+keymap.set("n", "<C-S-j>", ":bp<Return>", opts)
+keymap.set("n", "q", ":bd<CR>", opts)
+keymap.set("n", "<C-S-k>", ":bn<Return>", opts)
 
 keymap.set("n", "<C-i>", "<C-I>")
+vim.keymap.set("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true })
