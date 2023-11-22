@@ -1,2 +1,7 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+require('quazzer.base')
+require('quazzer.remap')
+require('quazzer.macos')
+require('quazzer.plugins')
+require('quazzer.highlight')
+
+
