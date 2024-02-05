@@ -48,6 +48,7 @@ keymap.set("n", "<leader><down>", "<C-W>-")
 keymap.set("n", "<C-S-j>", ":bp<Return>", opts)
 keymap.set("n", "q", ":bd<CR>", opts)
 keymap.set("n", "<C-S-k>", ":bn<Return>", opts)
+keymap.set("n", "<M-BS>", "<C-w>", opts)
 
 keymap.set("n", "<C-i>", "<C-I>")
 vim.keymap.set("n", "<leader>rn", function()
