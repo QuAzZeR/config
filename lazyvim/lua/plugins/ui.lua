@@ -59,7 +59,7 @@ return {
     opts = {
       options = {
         -- globalstatus = false,
-        theme = "dracula-nvim",
+        theme = "tokyonight",
       },
     },
   },

@@ -13,7 +13,7 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "dracula",
+        colorscheme = "tokyonight-day",
         news = {
           lazyvim = true,
           neovim = true,
@@ -46,7 +46,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "dracula" } },
+  install = { colorscheme = { "tokyonight", "dracula" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
