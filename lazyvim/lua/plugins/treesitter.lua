@@ -23,6 +23,8 @@ return {
         "gomod",
         "gowork",
         "gosum",
+        "vue",
+        "terraform",
       },
     },
   },
