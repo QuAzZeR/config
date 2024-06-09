@@ -97,4 +97,18 @@ return {
       },
     },
   },
+  -- Incremental rename
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    opts = {},
+  },
+  -- Rename {
+  {
+    "neovim/nvim-lspconfig",
+    opts = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      keys[#keys + 1] = { "<leader>rn", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
+    end,
+  },
 }

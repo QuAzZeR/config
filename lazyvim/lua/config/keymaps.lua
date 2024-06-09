@@ -51,6 +51,3 @@ keymap.set("n", "<C-S-k>", ":bn<Return>", opts)
 keymap.set("n", "<M-BS>", "<C-w>", opts)
 
 keymap.set("n", "<C-i>", "<C-I>")
-vim.keymap.set("n", "<leader>rn", function()
-  return ":IncRename " .. vim.fn.expand("<cword>")
-end, { expr = true })
