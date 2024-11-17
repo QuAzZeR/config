@@ -26,6 +26,7 @@ vim.opt.smartcase = true
 vim.opt.laststatus = 2
 
 vim.opt.shell = "zsh"
+vim.opt.rtp = vim.opt.rtp + "/opt/homebrew/opt/fzf"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m""]])
